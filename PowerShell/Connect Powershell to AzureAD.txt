@@ -1,0 +1,16 @@
+Syntax
+=======
+1) Get Credential in your PowerShell
+Get-Credential
+
+2) Install AzureAD module
+install-module -Name AZureAD -Scope currentuser
+
+3) Connect AzureAD 
+ connect-AzureAD
+
+
+
+Reference Link
+================
+https://docs.microsoft.com/en-us/microsoft-365/enterprise/connect-to-microsoft-365-powershell?view=o365-worldwide

@@ -1,0 +1,16 @@
+Syntax
+=======
+$Cred = Get-Credential
+$Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.outlook.com/powershell/ -Credential $Cred -Authentication Basic -AllowRedirection
+
+Set-ExecutionPolicy RemoteSigned
+
+Import-PSSession $Session
+# Run any commands you want here
+Remove-PSSession $Session
+
+
+Reference Link
+================
+
+https://www.tachytelic.net/2018/12/connect-office-365-powershell/

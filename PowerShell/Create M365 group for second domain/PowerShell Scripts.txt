@@ -1,0 +1,22 @@
+Create New
+new-unifiedgroup -displayname groupname -emailaddresses *** Email address is removed for privacy ***
+
+please replace groupname with your actual group name and 
+*** Email address is removed for privacy *** with your new group email address. 
+
+=====================
+
+Change existing group email address
+set-unifiedgroup groupname -primarysmtpaddress *** Email address is removed for privacy ***
+
+======================
+Reference
+
+Detail in URL
+https://answers.microsoft.com/en-us/msoffice/forum/msoffice_o365admin-mso_domains/create-an-office-365-group-in-different-domain/6272ad0b-8cb9-45ca-a96f-888a1b49f2e3?auth=1
+
+======================
+List out groups
+
+Get-Unifiedgroup
+

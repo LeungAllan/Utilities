@@ -1,0 +1,30 @@
+Reference:
+https://community.spiceworks.com/topic/1527141-adding-remote-printers-using-powershell-for-all-users
+
+
+To run this in PowerShell,  You'll need to use something like the following:
+
+Text
+Invoke-Command -ComputerName Target-Computer -Scriptblock {RUNDLL32 PRINTUI.DLL,PrintUIEntry /ga /n\\PrintServer\ShareName }
+If you wanted to do that on mass just swap out with a var (make sure to un-comment the Option you prefer after you've either populated option 1 with your list of computers or build a computer list file as defined in option 2)
+
+####################################################
+
+### ComputerList Option 1 ###
+# $ComputerList = @(“lana”, “lisaburger”)
+
+### ComputerList Option 2 ###
+# $ComputerList = @()
+# Import-Csv “C:\Temp\ComputersThatNeedPrinters.csv” | `
+# % {$ComputerList += $_.Computer}
+
+####################################################
+
+foreach ($computer in $ComputerList) {
+
+Invoke-Command -ComputerName $computer -Scriptblock {RUNDLL32 PRINTUI.DLL,PrintUIEntry /ga /n\\PrintServer\ShareName }
+
+}
+
+
+####################################################
